@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Cadastro </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-item *ngFor="let cadastro of listaCadastro | async">
+        <ion-label> <b> Nome: {{ cadastro.nome }}</b> <br> RG: {{ cadastro.rg }} <br />
+          <b> CPF: {{ cadastro.cpf }}</b> <br> Aluno: {{ cadastro.aluno }} <br />
+          <b> Curso: {{ cadastro.curso }}</b> <br> Ano: {{ cadastro.ano }} <br />
+          <b> Grau: {{ cadastro.grau }}</b> <br> Motivo: {{ cadastro.motivo }} <br />
+          <b> Quem Buscara: {{ cadastro.busca }}</b> <br> Parentesco: {{ cadastro.parentesco }} <br />
+          <b> Data: {{ cadastro.data }}</b> <br> Horário: {{ cadastro.horario }} <br /></ion-label>
+
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-button expand=full href='cadastro-salvar' shape='round'> Voltar para tela de Cadastrar </ion-button>
+  <ion-button expand=full href='pagina' shape='round'> Voltar para tela inicial </ion-button>
+</ion-content>

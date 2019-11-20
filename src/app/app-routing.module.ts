@@ -8,6 +8,11 @@ const routes: Routes = [
     path: 'pagina',
     loadChildren: () => import('./pagina/pagina.module').then( m => m.PaginaPageModule)
   },
+  {
+    path: 'cadastro-listar',
+    loadChildren: () => import('./cadastro/cadastro-listar/cadastro-listar.module').then( m => m.CadastroListarPageModule)
+  },
+
 ];
 
 @NgModule({
