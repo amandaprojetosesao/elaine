@@ -30,5 +30,8 @@ export class CadastroListarPage implements OnInit {
   ngOnInit() {
   }
 
+  excluir(entidade){
+  this.fire.list('cadastro').remove(entidade.key);
+  }
 
 }
